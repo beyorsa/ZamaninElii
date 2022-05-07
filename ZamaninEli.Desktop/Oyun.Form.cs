@@ -48,7 +48,9 @@ namespace ZamaninEli.Desktop
         }
         private void Oyun_KalanSureDegisti(object sender, EventArgs e)
         {
-            kalansure.Text = _oyun.KalanSure.ToString(@"m\:ss");
+            kalansure.Text = _oyun.KalanSure.ToString();
+            if (_oyun.KalanSure <= 0)
+                _oyun.Bitir();
         }
 
         #region Olaylar

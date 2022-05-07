@@ -43,9 +43,9 @@
             // 
             this.kalansure.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.kalansure.Font = new System.Drawing.Font("Verdana", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kalansure.Location = new System.Drawing.Point(-18, 0);
+            this.kalansure.Location = new System.Drawing.Point(0, 0);
             this.kalansure.Name = "kalansure";
-            this.kalansure.Size = new System.Drawing.Size(147, 83);
+            this.kalansure.Size = new System.Drawing.Size(129, 87);
             this.kalansure.TabIndex = 0;
             this.kalansure.Text = "120";
             this.kalansure.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
