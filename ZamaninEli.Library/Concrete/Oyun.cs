@@ -37,14 +37,15 @@ namespace ZamaninEli.Library.Concrete
         
         private Label _uzayPanelLabel;
         private object _oyuncuAdiTextBox;
-        private Panel uzayPanel;
+
         private static readonly Random Random = new Random();
 
         private readonly List<ToplananMadde> _toplananMaddeler = new List<ToplananMadde>();
 
-        public Oyun(Panel uzayPanel)
+        public Oyun(Panel uzayPanel, Panel bilgiPanel)
         {
-            this.uzayPanel = uzayPanel;
+            _uzayPanel = uzayPanel;
+            _bilgiPanel = bilgiPanel;
         }
 
 
@@ -139,12 +140,12 @@ namespace ZamaninEli.Library.Concrete
                 var o = new O(PanelUzunlugu, PanelGenisligi);
                 MaddeOlustur(o);
             }
-            else if (sayi >= 2 && sayi <= 3)
+            else if (sayi == 2 || sayi == 3)
             {
                 var h2 = new H2(PanelUzunlugu, PanelGenisligi);
                 MaddeOlustur(h2);
             }
-            else if (sayi >= 4 && sayi <= 6)
+            else if (sayi == 4 || sayi == 5 || sayi == 6)
             {
                 var elektrolizor = new Elektrolizor(PanelUzunlugu, PanelGenisligi);
                 MaddeOlustur(elektrolizor);

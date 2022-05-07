@@ -9,11 +9,14 @@ namespace ZamaninEli.Desktop
     {
         private readonly Oyun _oyun;
 
+      
+
         public OyunForm()
         {
             InitializeComponent();
 
-            _oyun = new Oyun(uzayPanel);
+            _oyun = new Oyun(uzayPanel,bilgiPanel);
+
 
             _oyun.KalanSureDegisti += Oyun_KalanSureDegisti;
             _oyun.MaddeToplandi += Oyun_MaddeToplandi;
@@ -25,10 +28,12 @@ namespace ZamaninEli.Desktop
             switch (e.KeyCode)
             {
                 case Keys.Right:
-                    _oyun.HareketEt(Yon.Saga);
+                    if(_oyun.OyunDuraklatildiMi == false)
+                        _oyun.HareketEt(Yon.Saga);
                     break;
                 case Keys.Left:
-                    _oyun.HareketEt(Yon.Sola);
+                    if (_oyun.OyunDuraklatildiMi == false)
+                        _oyun.HareketEt(Yon.Sola);
                     break;
                 case Keys.Escape:
                     _oyun.AyarlariAc();
@@ -112,6 +117,11 @@ namespace ZamaninEli.Desktop
         private void oyunsuresitextbox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void OyunForm_Load(object sender, EventArgs e)
+        {
+            _oyun.Basla();
         }
     }
 }

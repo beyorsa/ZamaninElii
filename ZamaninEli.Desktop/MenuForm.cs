@@ -8,18 +8,19 @@ namespace ZamaninEli.Desktop
     {
         private Oyun _oyun;
         private Panel uzayPanel;
+        private Panel bilgiPanel;
 
         public MenuForm()
         {
             InitializeComponent();
-            _oyun = new Oyun(uzayPanel);
+            
+            _oyun = new Oyun(uzayPanel,bilgiPanel);
         }
 
         private void OyunuBaslat_Click(object sender, System.EventArgs e)
         {
             OyunForm oyunForm = new OyunForm();
             oyunForm.ShowDialog();
-            _oyun.Basla();
         }
 
         private void HikayeAc_Click(object sender, System.EventArgs e)

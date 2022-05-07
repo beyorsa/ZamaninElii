@@ -120,6 +120,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OyunForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.OyunForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OyunForm_KeyDown);
             this.bilgiPanel.ResumeLayout(false);
             this.bilgiPanel.PerformLayout();

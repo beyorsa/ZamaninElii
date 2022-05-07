@@ -40,7 +40,7 @@ namespace ZamaninEli.Library.Abstarct
 
         public Cisim(int panelUzunlugu, int panelGenisligi)
         {
-            Image = Image.FromFile($@"..\..\Images\{GetType().Name}.png");
+            Image = Image.FromFile($@"Gorseller\{GetType().Name}.png");
             PanelUzunlugu = panelUzunlugu;
             PanelGenisligi = panelGenisligi;
             SizeMode = PictureBoxSizeMode.AutoSize;
